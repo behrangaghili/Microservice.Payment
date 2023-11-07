@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>Postex.Parcel.Domain</AssemblyName>
+    <RootNamespace>Postex.Parcel.Domain</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Postex.SharedKernel\Postex.SharedKernel.csproj" />
+  </ItemGroup>
+
+</Project>

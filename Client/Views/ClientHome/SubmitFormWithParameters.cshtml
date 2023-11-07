@@ -1,0 +1,50 @@
+﻿@model Client.Models.PaymentRequestViewModel
+
+<form asp-controller="ClientHome" asp-action="TestWithParameters" method="post" class="needs-validation" novalidate>
+    <div class="mb-3">
+        <label asp-for="OrderNumber" class="form-label"></label>
+        <input asp-for="OrderNumber" value="123456789" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"></label>
+        <input asp-for="Description" value="Default Description" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Amount" class="form-label"></label>
+        <input asp-for="Amount" value="100000" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="ReturnUrl" class="form-label"></label>
+        <input asp-for="ReturnUrl" value="https://default-return-url.com" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="CancelUrl" class="form-label"></label>
+        <input asp-for="CancelUrl" value="https://default-cancel-url.com" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="AppName" class="form-label"></label>
+        <input asp-for="AppName" value="Default App Name" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Remark" class="form-label"></label>
+        <input asp-for="Remark" value="Default Remark" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="PayerId" class="form-label"></label>
+        <input asp-for="PayerId" value="3fa85f64-5717-4562-b3fc-2c963f66afa6" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="ApiVersion" class="form-label"></label>
+        <input asp-for="ApiVersion" value="1" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="CorrelationId" class="form-label"></label>
+        <input asp-for="CorrelationId" value="ad02af48-b1f9-41e2-8b83-f9c9be9b6ae1" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="UserId" class="form-label"></label>
+        <input asp-for="UserId" value="d7c00541-f343-45c7-8da2-40ecf27f9b1b" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

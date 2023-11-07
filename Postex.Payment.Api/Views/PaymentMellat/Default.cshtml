@@ -1,0 +1,38 @@
+﻿@model string
+<html>
+<head>
+</head>
+<body>
+    <div style="height:300px;background-color:#ffffff;padding:20px;">
+        <div class="alert alert-info m-3 p-3 text-center">
+            <strong> در حال انتقال به سایت پرداخت ...</strong>
+        </div>
+    </div>
+    <script language="javascript" type="text/javascript">
+        function postRefId() {
+            var form = document.createElement("form");
+            form.setAttribute("method", "POST");
+            form.setAttribute("action", "https://bpm.shaparak.ir/pgwchannel/startpay.mellat");
+            //form.setAttribute("action", "https://sandbox.banktest.ir/mellat/bpm.shaparak.ir/pgwchannel/startpay.mellat");
+            form.setAttribute("target", "_self");
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("name", "RefId");
+            hiddenField.setAttribute("value", "@Model");
+
+            var mobileNoField = document.createElement("input");
+            mobileNoField.setAttribute("name", "MobileNo");
+            mobileNoField.setAttribute("value", "@ViewBag.MobileNo");
+
+            form.appendChild(hiddenField);
+            form.appendChild(mobileNoField);
+
+            document.body.appendChild(form);
+            form.submit();
+            document.body.removeChild(form);
+        }
+        postRefId();
+    </script>
+</body>
+</html>
+
+

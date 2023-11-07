@@ -1,0 +1,13 @@
+﻿@*@{
+    ViewData["Title"] = "Test";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>@ViewBag.Message</p>
+*@
+@{
+    Layout = null;   // This is to ensure that only the raw API response is rendered, without any additional layout HTML.
+}
+@Html.Raw(ViewBag.ApiResponse)
+

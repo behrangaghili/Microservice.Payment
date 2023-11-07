@@ -1,0 +1,60 @@
+﻿@using Postex.Payment.Application.Contracts.Saman;
+@model SamanPayModel
+<html>
+<head>
+</head>
+<body>
+    <div style="height:300px;background-color:#ffffff;padding:20px;">
+        <div class="alert alert-info m-3 p-3 text-center">
+            <strong> در حال انتقال به سایت پرداخت ...</strong>
+        </div>
+    </div>
+    <script language="javascript" type="text/javascript">
+        function postRefId() {
+            var form = document.createElement("form");
+            form.setAttribute("method", "POST");
+            form.setAttribute("action", "https://sep.shaparak.ir/OnlinePG/OnlinePG");
+            form.setAttribute("target", "_self");
+       
+            var Field1 = document.createElement("input");
+            Field1.setAttribute("name", "Amount");
+            Field1.setAttribute("value", "@Model.Amount");
+
+           var Field2 = document.createElement("input");
+            Field2.setAttribute("name", "TerminalId");
+            Field2.setAttribute("value", "@Model.MerchantId");
+
+            var Field3 = document.createElement("input");
+            Field3.setAttribute("name", "ResNum");
+            Field3.setAttribute("value", "@Model.ResNum");
+
+            var Field4 = document.createElement("input");
+            Field4.setAttribute("name", "RedirectUrl");
+            Field4.setAttribute("value", "@Model.RedirectUrl");
+
+            var Field5 = document.createElement("input");
+            Field5.setAttribute("name", "Token");
+            Field5.setAttribute("value", "@Model.Token");
+
+            var Field6 = document.createElement("input");
+            Field6.setAttribute("name", "CellNumber");
+            Field6.setAttribute("value", "@Model.MobileNo");
+
+
+            form.appendChild(Field1);
+            form.appendChild(Field2);
+            form.appendChild(Field3);
+            form.appendChild(Field4);
+            form.appendChild(Field5);
+            form.appendChild(Field6);
+
+            document.body.appendChild(form);
+            form.submit();
+            document.body.removeChild(form);
+        }
+        postRefId();
+    </script>
+</body>
+</html>
+
+
